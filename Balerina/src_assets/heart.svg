@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="heart.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient845">
+      <stop
+         style="stop-color:#c70000;stop-opacity:1"
+         offset="0"
+         id="stop841" />
+      <stop
+         style="stop-color:#3f0000;stop-opacity:0.97254902"
+         offset="1"
+         id="stop843" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient829">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="0"
+         id="stop825" />
+      <stop
+         style="stop-color:#70006e;stop-opacity:0.65801889"
+         offset="1"
+         id="stop827" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient829"
+       id="linearGradient831"
+       x1="81.904307"
+       y1="153.68824"
+       x2="153.44259"
+       y2="153.68824"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient845"
+       id="radialGradient847"
+       cx="101.70396"
+       cy="138.29564"
+       fx="101.70396"
+       fy="138.29564"
+       r="37.636704"
+       gradientTransform="matrix(1.6284653,0.23256758,-0.12416346,0.86940698,-46.74614,-3.711875)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="412.53721"
+     inkscape:cy="581.21766"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="3840"
+     inkscape:window-height="2050"
+     inkscape:window-x="3348"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="112.02269,173.68006"
+       orientation="0,1"
+       id="guide817"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="117.8127,104.8949"
+       orientation="1,0"
+       id="guide819"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="129.09118,154.41497"
+       orientation="0,1"
+       id="guide821"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:url(#radialGradient847);stroke:url(#linearGradient831);stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       d="m 117.8127,184.82201 c 0,-20.03118 -35.875788,-16.96206 -35.775894,-42.37061 0.105711,-26.88805 35.775894,-24.41003 35.775894,-4.17684 0,-20.23319 34.90529,-21.83042 35.49022,4.31056 0.59988,26.80883 -35.49022,22.02991 -35.49022,42.23689 z"
+       id="path815"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscsc"
+       inkscape:export-filename="D:\Unity Projects\Balerina\Balerina\Assets\sprites\ui\heart.png"
+       inkscape:export-xdpi="86.450462"
+       inkscape:export-ydpi="86.450462" />
+    <path
+       style="fill:#f80000;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.19621749"
+       d="m 91.740264,142.58503 10.958056,-15.63527 c 0,0 -7.550368,25.85833 -7.483553,25.19015 0.06682,-0.66817 14.432553,-19.51067 14.432553,-19.51067 l -4.20949,20.98066 8.41899,-11.02487 -2.00452,11.35895 8.55262,-8.75307 c 0,0 -2.59222,10.89123 -2.59222,10.62396 0,-0.26727 7.1358,-4.87767 7.1358,-4.87767 0,0 -0.73499,6.81537 -0.4009,6.88219 0.33409,0.0668 4.67722,-2.33861 4.67722,-2.33861 l -0.33409,4.40995 c 0,0 4.00904,-2.13816 4.07586,-1.87089 0.0668,0.26727 -3.67496,6.54811 -3.67496,6.54811 l 0.26727,-3.54132 c 0,0 -5.47902,2.3386 -4.87767,1.87088 0.60136,-0.46772 2.33861,-5.54584 2.20498,-5.07812 -0.13364,0.46772 -7.41673,4.2095 -7.48355,3.27405 -0.0668,-0.93544 0.4009,-2.93996 0.4009,-2.93996 0,0 -7.14945,3.87541 -7.01582,3.54132 0.13363,-0.33409 2.27179,-7.48355 2.27179,-7.48355 l -7.14946,3.34087 1.33635,-5.94675 -5.7463,4.94449 -0.53454,-8.88671 -9.488065,6.5481 1.536801,-11.62622 -6.548104,4.20949 z"
+       id="path853"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="D:\Unity Projects\Balerina\Balerina\Assets\sprites\ui\heart.png"
+       inkscape:export-xdpi="86.450462"
+       inkscape:export-ydpi="86.450462" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0.1962175;fill-rule:evenodd;stroke:none;stroke-width:2.77697849;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.65801888"
+       id="path858"
+       cx="98.288376"
+       cy="135.86989"
+       r="6.4478779"
+       inkscape:export-filename="D:\Unity Projects\Balerina\Balerina\Assets\sprites\ui\heart.png"
+       inkscape:export-xdpi="86.450462"
+       inkscape:export-ydpi="86.450462" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0.83924345;fill-rule:evenodd;stroke:none;stroke-width:2.77697849;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.65801888"
+       id="path858-7"
+       cx="96.484299"
+       cy="134.83421"
+       r="6.4478779"
+       inkscape:export-filename="D:\Unity Projects\Balerina\Balerina\Assets\sprites\ui\heart.png"
+       inkscape:export-xdpi="86.450462"
+       inkscape:export-ydpi="86.450462" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0.83924345;fill-rule:evenodd;stroke:none;stroke-width:1.59712243;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.65801888"
+       id="path858-7-6"
+       cx="95.482048"
+       cy="133.6315"
+       r="3.7083652"
+       inkscape:export-filename="D:\Unity Projects\Balerina\Balerina\Assets\sprites\ui\heart.png"
+       inkscape:export-xdpi="86.450462"
+       inkscape:export-ydpi="86.450462" />
+  </g>
+</svg>
