@@ -18,18 +18,22 @@ public class Restart : MonoBehaviour {
 	private void OnMouseDown()
 	{
 		Debug.Log("restart");
-		var enemyManager = (EnemyManager) GameObject.Find("enemyManager").gameObject.GetComponent(typeof(EnemyManager));
-		for (var i = 0; i < enemyManager.Enemies.Count; i++)
-		{
-			Destroy(enemyManager.Enemies[i]);
-		}
+		var enemyManager = (EnemyManager) GameObject.Find("Scripts").gameObject.GetComponent(typeof(EnemyManager));
+		
+		
+		enemyManager.Restart();
+		
 
 		var hero = (Hero) GameObject.Find("hero").gameObject.GetComponent(typeof(Hero));
 		hero.Health = 100;
+
+		var gameWorld = (GameWorld) GameObject.Find("Scripts").gameObject.GetComponent(typeof(GameWorld));
 		
-		var restartPosition= Camera.main.ScreenToWorldPoint (new Vector2(enemyManager.Width/2, enemyManager.Height/2));
+		var restartPosition= Camera.main.ScreenToWorldPoint (gameWorld.Center);
 		restartPosition.z = 1f;
+		hero.StopAllForces();
 		hero.transform.position = restartPosition;
+		
 		
 	}
 }

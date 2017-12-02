@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4823031034926258}
   - component: {fileID: 212566807252822790}
   - component: {fileID: 68546446661061360}
+  - component: {fileID: 114715286233081240}
   m_Layer: 10
   m_Name: body
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739547995994598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.61, y: 1.8376657, z: 1}
+  m_LocalPosition: {x: 4.96, y: 1.66, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4823031034926258}
@@ -120,7 +121,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 69fd47bd61aae31408c1b70d6db910ed, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -221,8 +222,21 @@ MonoBehaviour:
   Health: 100
   MinSwipeDistance: {x: 0, y: 0}
   KSpeed: 700
-  MaxWalkSpeed: 8
+  KAccelerometr: 100
+  MaxWalkSpeed: 5
   MaxJumpSpeed: 5
+  _isHitting: 0
+--- !u!114 &114715286233081240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787816621612478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735a4d3eb2032f4a985a0dcc56baa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212566807252822790
 SpriteRenderer:
   m_ObjectHideFlags: 1

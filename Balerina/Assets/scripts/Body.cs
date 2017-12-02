@@ -7,14 +7,9 @@ public class Body : MonoBehaviour
 {
 
 	private Hero _hero;
-	// Use this for initialization
+	
 	void Start () {
 		_hero= (Hero) GameObject.Find("hero").GetComponent(typeof(Hero));
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
 	}
 	
@@ -28,9 +23,5 @@ public class Body : MonoBehaviour
 		{
 			Debug.Log("Game over!!!");
 		}
-		
-		//var hearts = GameObject.Find("heart").GetComponent<SpriteRenderer>();
-		
-//		hearts.size.Set(hearts.drawMode.w _hero.Health/100, hearts.size.y);
 	}
 }

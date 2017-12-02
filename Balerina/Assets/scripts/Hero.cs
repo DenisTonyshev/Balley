@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Runtime.CompilerServices;
+using UnityEngine;
 using UnityEngine.UI;
 
 
 public class Hero : MonoBehaviour
 {
-
+    private float _gravity;
     public int Health = 100;
-    
+
     private float _startTime;
     private float _endTime;
     private Vector3 _startPos;
@@ -14,37 +15,40 @@ public class Hero : MonoBehaviour
     private Vector2 _swipeDistance;
     public Vector2 MinSwipeDistance;
     private float _swipeTime;
-     
 
     // this is a koefficient that impacts a force to make right speed
     public float KSpeed = 700f;
-    public float MaxWalkSpeed = 8f;
+
+    public float KAccelerometr = 100f;
+    public float MaxWalkSpeed = 5f;
     public float MaxJumpSpeed = 5f;
 
-    public bool _isHitting;
-    
-  
-    
-    
-   // private float _walkSpeed;
+    public bool IsHitting;
+
+    // private float _walkSpeed;
     private float _jumpSpeed;
-    
+
     private Vector2 _touchPos;
     private Text _text;
     private Animator _animator;
 
     private Rigidbody2D _rb;
-    
+
+    private InputField _accelerometrInputField;
+
 
     private void Start()
     {
-        _isHitting = false;
+        _accelerometrInputField = GameObject.Find("InputField").GetComponent<InputField>();
+        _accelerometrInputField.text = KAccelerometr.ToString();
+
+        IsHitting = false;
         _rb = GetComponent<Rigidbody2D>();
         _text = GameObject.Find("Text").GetComponent<Text>();
         _text.text = "";
 
         MinSwipeDistance = new Vector3(30f, 30f);
-        
+
         _animator = GetComponent<Animator>();
         _animator.enabled = false;
     }
@@ -53,9 +57,16 @@ public class Hero : MonoBehaviour
     private void Update()
     {
         // is plaing animation of bat hit;
-        _isHitting = AnimatorIsPlaying("hero_hit");
-       
-    if (Input.GetMouseButtonDown(0))
+        IsHitting = AnimatorIsPlaying("hero_hit");
+        KAccelerometr = float.Parse(_accelerometrInputField.text);
+
+        _rb.AddForce(new Vector2(Input.acceleration.x * KAccelerometr, 0));
+        if (Mathf.Abs(_rb.velocity.x) > MaxWalkSpeed)
+        {
+            _rb.velocity = new Vector2(Mathf.Sign(_rb.velocity.x) * MaxWalkSpeed, _rb.velocity.y);
+        }
+
+        if (Input.GetMouseButtonDown(0))
         {
             _startTime = Time.time;
             _startPos = Input.mousePosition;
@@ -66,7 +77,7 @@ public class Hero : MonoBehaviour
             _endTime = Time.time;
             _swipeTime = _endTime - _startTime;
             _swipeDistance = Input.mousePosition - _startPos;
-            if (Mathf.Abs(_swipeDistance.x) <= MinSwipeDistance.x && 
+            if (Mathf.Abs(_swipeDistance.x) <= MinSwipeDistance.x &&
                 Mathf.Abs(_swipeDistance.y) <= MinSwipeDistance.y)
             {
                 Hit();
@@ -75,11 +86,10 @@ public class Hero : MonoBehaviour
 
             if (Mathf.Abs(_swipeDistance.y) > Mathf.Abs(_swipeDistance.x))
             {
-                
                 Jump(CalcSpeed(_swipeDistance.y, _swipeTime, MaxJumpSpeed));
                 return;
             }
- 
+
             if (_swipeDistance.x < 0)
                 WalkLeft(CalcSpeed(_swipeDistance.x, _swipeTime, MaxWalkSpeed));
             if (_swipeDistance.x > 0)
@@ -136,7 +146,7 @@ public class Hero : MonoBehaviour
         var sp = distance / swipeTime / KSpeed;
         return Mathf.Abs(sp) > maxSpeed ? maxSpeed : sp;
     }
-    
+
     private void Hit()
     {
         _animator.enabled = true;
@@ -144,7 +154,7 @@ public class Hero : MonoBehaviour
     }
 
     private void Jump(float force)
-    {  
+    {
         _rb.velocity = new Vector2(_rb.velocity.x, force);
     }
 
@@ -155,7 +165,7 @@ public class Hero : MonoBehaviour
     }
 
     private void WalkLeft(float speed)
-    {   
+    {
         Turn(1);
         Walk(Mathf.Abs(speed) * -1f);
     }
@@ -177,17 +187,23 @@ public class Hero : MonoBehaviour
         }
 
         var scale = transform.localScale;
-        scale.x=Mathf.Abs(scale.x)*sign;
+        scale.x = Mathf.Abs(scale.x) * sign;
         transform.localScale = scale;
     }
 
-    bool AnimatorIsPlaying(string stateName){
+    private bool AnimatorIsPlaying(string stateName)
+    {
         return AnimatorIsPlaying() && _animator.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
-    
-    bool AnimatorIsPlaying(){
+
+    private bool AnimatorIsPlaying()
+    {
         return _animator.GetCurrentAnimatorStateInfo(0).length >
                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
-  
+
+    public void StopAllForces()
+    {
+        _rb.velocity = Vector3.zero;
+    }
 }

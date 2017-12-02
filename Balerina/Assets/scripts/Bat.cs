@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 
-public class BatCollision : MonoBehaviour
+/// <inheritdoc />
+/// <summary>
+/// The bat
+/// </summary>
+public class Bat : MonoBehaviour
 {
+	
 	public int Power=25;
 	private void OnCollisionEnter2D(Collision2D other)
 	{
